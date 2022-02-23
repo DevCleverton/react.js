@@ -21,7 +21,7 @@ function App() {
 		<div className="container">
 			<GoogleLogin
 				clientId="208739294372-0s28mtjnq92um8g6argnn894oa01ls8o.apps.googleusercontent.com"
-				buttonText="Continuar com o Google"
+				buttonText="Continuar com o Google para o Projeto React"
 				onSuccess={responseGoogle}
 				onFailure={responseGoogle}
 			/>
