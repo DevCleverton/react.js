@@ -1,42 +1,34 @@
 import React, { useState } from "react";
+import "./styles.css";
 import GoogleLogin from "react-google-login";
 
-function App() {
-	const [name, setName] = useState();
-	const [email, setEmail] = useState();
-	const [profilePic, setProfilePic] = useState();
-	const [isLoggedIn, setIsLoggedIn] = useState(false);
+export default function App() {
 
-	const responseGoogle = (response) => {
-		console.log(response);
-		const {
-			profileObj: { name, email, imageUrl },
-		} = response;
-		setName(name);
-		setEmail(email);
-		setProfilePic(imageUrl);
-		setIsLoggedIn(true);
-	};
-	return (
-		<div className="container">
-			<GoogleLogin
-				clientId="208739294372-0s28mtjnq92um8g6argnn894oa01ls8o.apps.googleusercontent.com"
-				buttonText="Continuar com o Google para o Projeto React"
-				onSuccess={responseGoogle}
-				onFailure={responseGoogle}
-			/>
-			{isLoggedIn ? (
-				<div style={{ textAlign: "center" }}>
-					<h1>User Information</h1>
-					<img className="profile" src={profilePic} alt="Profile" />
-					<p>Name: {name}</p>
-					<p>Email: {email}</p>
-				</div>
-			) : (
-				""
-			)}
-		</div>
-	);
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [url, setUrl] = useState("");
+
+const responseGoogle = response => {
+console.log(response);
+setName(response.profileObj.name);
+setEmail(response.profileObj.email);
+setUrl(response.profileObj.imageUrl);
+};
+
+return (
+<div className="App">
+<h1>Login with Google</h1>
+<h2>Welcome: {name}</h2>
+<h2>Email: {email}</h2>
+<img src={url} alt={name} />
+<GoogleLogin
+clientId="607921044452-261g3g9obeecchrsjuvajvvj4c4vtfku.apps.googleusercontent.com"
+buttonText="Login"
+onSuccess​={responseGoogle}
+onFailure​={responseGoogle}
+cookiePolicy={"single_host_origin"}
+/>
+</div>
+);
+
 }
-
-export default App;
