@@ -22,7 +22,7 @@ return (
 <h2>Email: {email}</h2>
 <img src={url} alt={name} />
 <GoogleLogin
-clientId="607921044452-261g3g9obeecchrsjuvajvvj4c4vtfku.apps.googleusercontent.com"
+clientId="208739294372-0s28mtjnq92um8g6argnn894oa01ls8o.apps.googleusercontent.com"
 buttonText="Login"
 onSuccess​={responseGoogle}
 onFailure​={responseGoogle}
