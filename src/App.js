@@ -7,6 +7,7 @@ export default function App() {
 const [name, setName] = useState("");
 const [email, setEmail] = useState("");
 const [url, setUrl] = useState("");
+const [isLoggedIn, setIsLoggedIn] = useState(false);
 
 const responseGoogle = response => {
 console.log(response);
@@ -24,8 +25,8 @@ return (
 <GoogleLogin
 clientId="208739294372-0s28mtjnq92um8g6argnn894oa01ls8o.apps.googleusercontent.com"
 buttonText="Login"
-onSuccess​={responseGoogle}
-onFailure​={responseGoogle}
+onSuccess={responseGoogle}
+onFailure={responseGoogle}
 cookiePolicy={"single_host_origin"}
 />
 </div>
