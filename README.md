@@ -2,3 +2,8 @@
  vagas reatc.js
 https://github.com/DevCleverton/react.js-br-vagas
 
+_  Dependencias
+
+Npm install firebase
+
+npm install @material-ui/core @material-ui/icons
