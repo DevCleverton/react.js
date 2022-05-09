@@ -7,3 +7,5 @@ _  Dependencias
 Npm install firebase
 
 npm install @material-ui/core @material-ui/icons
+
+ npm install emoji-picker-react
