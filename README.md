@@ -1,6 +1,6 @@
 [![Deploy vagas React.js em construçao](https://vercel.com/button)](https://react-js-sand.vercel.app)
 
- outras vagas reatc.js
+ 
 
 
 _  Dependencias
